@@ -41,7 +41,41 @@ app.get("/service", function(req, res){
         	]
         }]
   	}];
-	return res.json({"respuesta": estructuraArbol});
+  	var columnasArbol = [
+	{field:"Tipo Suma",
+		displayName: "Tipo Suma"
+	},
+	{field:"Moneda",
+		displayName: "Moneda"
+	},
+	{field:"LEP",
+		displayName: "LEP"
+	},
+	{field:"LEA",
+		displayName: "LEA"
+	},
+	{field:"Monto Utilizado",
+		displayName: "Monto Utilizado"
+	},
+	{field:"Monto Protegido",
+		displayName: "Monto Protegido"
+	},
+	{field:"Monto Reservado",
+		displayName: "Monto Reservado"
+	},
+	{field:"Monto Disponible",
+		displayName: "Monto Disponible"
+	},
+	{field:"Plazo Maximo",
+		displayName: "Plazo Maximo"
+	},
+	{field:"Naturaleza",
+		displayName: "Naturaleza"
+	},
+	{field:"Fecha Vigencia",
+		displayName: "Fecha Vigencia"
+	}];
+	return res.json({"estructuraArbol": estructuraArbol, "columnasArbol": columnasArbol});
 });
 
 // start server on the specified port and binding host
